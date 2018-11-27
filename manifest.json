@@ -1,67 +1,59 @@
 {
-   "commerceSuiteVersion": "6.5.0.7",
-   "extensions": [
-       "optcustomerfacade",
-       "yacceleratorstorefront",
-       "backoffice",
-       "platformbackoffice",
-       "electronicsstore",
-       "basecommercebackoffice",       
-       "yacceleratorfulfilmentprocess",
-       "solrfacetsearchbackoffice",
-       "commerceservicesbackoffice"
-   ],
-   "storeFrontExtension": "yacceleratorstorefront",
-   "storeFrontWebRoot": "/yacceleratorstorefront",
-   "properties": [
-        {
-            "key": "test.property.1",
-            "value": "test.property.1.value"
-        },
-        {
-            "key": "test.property.2",
-            "value": "test.property.2.value"
-        }
+    "commerceSuiteVersion": "1808.1",
+    "extensions": [
+        "modeltacceleratorservices",
+        "electronicsstore",
+        "yacceleratorstorefront",
+        "backoffice"
     ],
-   "project": "ps1b",
-   "recipe": "pipeline_b2c_dockerized",
-   "resultingImageVersion": "ps1b",    
-   "aspects": [
+         "aspects": [
         {
-            "name": "backgroundProcessing",
-            "properties": [
+            "name": "backoffice",
+            "webapps": [
                 {
-                    "key": "cluster.node.groups",
-                    "value": "backgroundProcessing"
-                }              
+                    "name": "hac",
+                    "contextPath": "/hac"
+                },
+                {
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                },
+                {
+                    "name": "backoffice",
+                    "contextPath": ""
+                }
             ]
         },
         {
             "name": "accstorefront",
-            "properties": [
+            "webapps": [
                 {
-                    "key": "acc.test.property.1",
-                    "value": "acc.1.value"
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
                 },
                 {
-                    "key": "acc.test.property.2",
-                    "value": "acc.2.value"
-                }                
+                    "name": "yacceleratorstorefront",
+                    "contextPath": "/yacceleratorstorefront"
+                },
+                {
+                    "name": "acceleratorservices",
+                    "contextPath": "/acceleratorservices"
+                }
             ]
         },
         {
-            "name": "admin",
-            "properties": [
+            "name": "backgroundProcessing",
+            "properties": [],
+            "webapps": [
                 {
-                    "key": "adm.test.property.1",
-                    "value": "adm.1.value"
+                    "name": "hac",
+                    "contextPath": ""
                 },
                 {
-                    "key": "adm.test.property.2",
-                    "value": "adm.2.value"
-                }                
+                    "name": "mediaweb",
+                    "contextPath": "/medias"
+                }
             ]
-        }        
+        }
     ]
 }
-
