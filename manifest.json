@@ -6,7 +6,7 @@
         "yacceleratorstorefront",
         "backoffice",
         "basecommercebackoffice",       
-        "solrfacetsearchbackoffice",
+        "solrfacetsearchbackoffice"
     ],
          "aspects": [
         {
