@@ -1,5 +1,5 @@
 {
-    "commerceSuiteVersion": "1811.1",
+    "commerceSuiteVersion": "1905.0",
     "extensions": [
         "modeltacceleratorservices",
         "electronicsstore",
@@ -28,29 +28,6 @@
         },
         {
             "name": "accstorefront",
-            "properties": [
-                {
-                    "key": "spring.session.enabled",
-                    "value": "true"
-                },
-                {
-                    "key": "spring.session.yacceleratorstorefront.save",
-                    "value":"async"
-                },
-                {
-                    "key": "spring.session.yacceleratorstorefront.cookie.name",
-                    "value": "JSESSIONID"
-                },
-                {
-                    "key": "spring.session.yacceleratorstorefront.cookie.path",
-                    "value": "/"
-                },
-                {
-                    "key":"storefrontContextRoot",
-                    "value":""
-                }      
-            ],
-            
             "webapps": [
                 {
                     "name": "mediaweb",
@@ -58,7 +35,7 @@
                 },
                 {
                     "name": "yacceleratorstorefront",
-                    "contextPath": ""
+                    "contextPath": "/yacceleratorstorefront"
                 },
                 {
                     "name": "acceleratorservices",
